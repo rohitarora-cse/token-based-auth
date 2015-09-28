@@ -46,7 +46,7 @@ public class StatelessAuthenticationSecurityConfig extends WebSecurityConfigurer
 				.antMatchers(HttpMethod.POST, "/api/login").permitAll()
 				
 				//allow anonymous GETs to API
-				.antMatchers(HttpMethod.GET, "/api/**").permitAll()
+				//.antMatchers(HttpMethod.GET, "/api/**").permitAll()
 				
 				//defined Admin only API area
 				.antMatchers("/admin/**").hasRole("ADMIN")

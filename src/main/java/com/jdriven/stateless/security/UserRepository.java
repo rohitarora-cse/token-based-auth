@@ -1,5 +1,6 @@
 package com.jdriven.stateless.security;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,5 +17,9 @@ public class UserRepository {
 	
 	public void save(User user) {
 		database.put(user.getUsername(), user);
+	}
+
+	public Collection<User> findAll() {
+		return database.values();
 	}
 }
